@@ -59,8 +59,9 @@ int main(int argc, char** argv)
 
     // we purposefully run the smallest problem twice so as to "condition"
     // BLAS. For timing purposes, ignore the timing of the first problem size
-    std::vector<int> test_sizes{1024, 1024, 2048, 4096, 8192, 16384};
+    //std::vector<int> test_sizes{1024, 1024, 2048, 4096, 8192, 16384};
 
+    std::vector<int> test_sizes{1024};
     int n_problems = test_sizes.size();
 
     // preallocate memory buffers for all problems: assume the last number in test_sizes is the largest
