@@ -12,7 +12,6 @@ void my_dgemv(int n, double* A, double* x, double* y) {
    for (int i=0; i<n; ++i){
       double temp = 0.0;
       int row_start = i*n;
-      #pragma omp simd reduction(+:temp)
       for (int j=0; j<n; ++j){
          temp += A[row_start + j] * x[j];
       }
